@@ -108,6 +108,9 @@ Section:NewButton("Big Jump", "Big Jump", function()
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
 end
 end)
+Section:NewButton("Fly [x]", "Shasam Fly", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LPrandom/lua-projects/master/superherofly.lua"))()
+end)
 local Tab = Window:NewTab("info")
 local Section = Tab:NewSection("Made By fikop#2262")
 local Section = Tab:NewSection("credits - kova ui (library) thanks to christmas service")
