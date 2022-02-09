@@ -74,6 +74,9 @@ end)
 Section:NewButton("Hide Place #7", "Teleport To Hide Place #7", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-955.901978, -28.375, 567.784973, 0.993052542, -6.38994554e-13, -0.117671981, -1.1828722e-08, 1, -9.98298901e-08, 0.117671981, 1.00528233e-07, 0.993052542)
 end)
+Section:NewButton("Hide Place #8", "Teleport To Hide Place #8", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-683.327454, -226.149216, -854.933167, -0.79431051, 8.9433233e-10, 0.607511997, -6.91653739e-08, 1, -9.19045462e-08, -0.607511997, -1.15019539e-07, -0.79431051)
+end)
 local Tab = Window:NewTab("settings")
 local Section = Tab:NewSection("Made By fikop#2262")
 Section:NewKeybind("Close Gui", "Close Gui KeyBind", Enum.KeyCode.U, function()
@@ -127,6 +130,9 @@ while game:GetService("RunService").RenderStepped:wait() do
     local b = a.Velocity
     char:MoveTo(a.Position + Vector3.new(b.X/20,b.Y/100,b.Z/20))
 end
+end)
+Section:NewSlider("Fov 0-120", "Changes Fov", 120, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game:GetService'Workspace'.Camera.FieldOfView = s
 end)
 local Tab = Window:NewTab("info")
 local Section = Tab:NewSection("Made By fikop#2262")
