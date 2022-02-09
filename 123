@@ -120,6 +120,14 @@ end)
 Section:NewButton("Animation Changer", "Any animation (zombie and other)", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fikoopik/not-my/main/123123"))()
 end)
+Section:NewButton("Speed Hack + Wall climb", "Speed hack + wall climb XD", function()
+local char = game:GetService("Players").LocalPlayer.Character
+while game:GetService("RunService").RenderStepped:wait() do
+        local a = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+    local b = a.Velocity
+    char:MoveTo(a.Position + Vector3.new(b.X/20,b.Y/100,b.Z/20))
+end
+end)
 local Tab = Window:NewTab("info")
 local Section = Tab:NewSection("Made By fikop#2262")
 local Section = Tab:NewSection("credits - kova ui (library) thanks to christmas service")
